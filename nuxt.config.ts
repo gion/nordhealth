@@ -1,16 +1,28 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// eslint-disable-next-line no-undef
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  future: { compatibilityVersion: 4 },
-  devtools: { enabled: true },
-  ssr: false,
   modules: [
     '@nuxt/eslint',
     '@nuxt/test-utils',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
   ],
+  ssr: false,
+  devtools: { enabled: true },
   vue: {
     compilerOptions: {
-      isCustomElement: (tag) => tag.includes('-')
-    }
-  }
+      isCustomElement: tag => tag.includes('-'),
+    },
+  },
+  future: { compatibilityVersion: 4 },
+  compatibilityDate: '2024-11-01',
+  eslint: {
+    config: {
+      stylistic: {
+        indent: 2,
+        quotes: 'single',
+        semi: false,
+      },
+    },
+  },
 })

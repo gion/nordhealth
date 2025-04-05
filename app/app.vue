@@ -1,11 +1,13 @@
 <template>
-  <div>
-     <provet-button variant="primary" @click="count++">
-      Count is: {{ count }}
-    </provet-button>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup>
-  const count = ref(0)
+useHead({
+  htmlAttrs: {
+    class: 'n-reset',
+  },
+})
 </script>
