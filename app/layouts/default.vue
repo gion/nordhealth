@@ -1,14 +1,16 @@
 <template>
-  <provet-layout
-    style="--n-layout-background-color: var(--n-color-nav-surface)"
-  >
-    <provet-top-bar slot="header" style="width: 100%" >
+  <provet-layout style="--n-layout-background-color: var(--n-color-nav-surface)">
+    <provet-top-bar slot="header" style="width: 100%">
       <h1>This App</h1>
       <provet-dropdown slot="end">
         <provet-button variant="plain" slot="toggle" aria-describedby="user-tooltip">
-          <provet-avatar style="transform: translateY(-1px)" :name="userStore.displayName">{{ userStore.initials }}</provet-avatar>
+          <provet-avatar style="transform: translateY(-1px)" :name="userStore.displayName">{{
+            userStore.initials
+          }}</provet-avatar>
         </provet-button>
-        <provet-avatar slot="header" size="s" :name="userStore.displayName">{{ userStore.initials }}</provet-avatar>
+        <provet-avatar slot="header" size="s" :name="userStore.displayName">{{
+          userStore.initials
+        }}</provet-avatar>
         <p slot="header" class="n-color-text-weak n-font-size-s">
           Signed in as <span class="n-font-weight-active">{{ userStore.displayName }}</span>
         </p>
@@ -34,22 +36,20 @@
 
     <NuxtPage />
 
-    <provet-footer slot="footer">
-      {{ year }} &copy; This App 
-    </provet-footer>
+    <provet-footer slot="footer"> {{ year }} &copy; This App </provet-footer>
   </provet-layout>
 </template>
 
 <script setup lang="ts">
-import { useUserStore } from '~/store/useUserStore'
+import { useUserStore } from '~/store/useUserStore';
 
-const userStore = useUserStore()
-const year = new Date().getFullYear()
+const userStore = useUserStore();
+const year = new Date().getFullYear();
 
 const logout = () => {
-  userStore.logout()
-  navigateTo('/')
-}
+  userStore.logout();
+  navigateTo('/');
+};
 </script>
 
 <style scoped>

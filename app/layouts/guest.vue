@@ -5,18 +5,14 @@
   >
     <provet-header slot="header">
       <NuxtLink to="/">
-        <h1 class="n-typescale-l">
-          This App
-        </h1>
+        <h1 class="n-typescale-l">This App</h1>
       </NuxtLink>
       <UserMenu slot="end" />
     </provet-header>
 
     <NuxtPage />
 
-    <provet-footer slot="footer">
-      2025 © This App 
-    </provet-footer>
+    <provet-footer slot="footer"> 2025 © This App </provet-footer>
   </provet-layout>
 </template>
 
