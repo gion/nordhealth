@@ -1,7 +1,13 @@
-import withNuxt from './.nuxt/eslint.config.mjs';
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default [
-  withNuxt(),
+export default withNuxt([
+  {
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
+  },
   {
     rules: {
       'vue/no-deprecated-slot-attribute': 'off',
@@ -13,4 +19,4 @@ export default [
       'vue/multi-word-component-names': 'off',
     },
   },
-];
+])

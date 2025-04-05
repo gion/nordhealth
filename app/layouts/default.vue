@@ -3,7 +3,7 @@
     <provet-top-bar slot="header" style="width: 100%">
       <h1>This App</h1>
       <provet-dropdown slot="end">
-        <provet-button variant="plain" slot="toggle" aria-describedby="user-tooltip">
+        <provet-button slot="toggle" variant="plain" aria-describedby="user-tooltip">
           <provet-avatar style="transform: translateY(-1px)" :name="userStore.displayName">{{
             userStore.initials
           }}</provet-avatar>
@@ -41,19 +41,13 @@
 </template>
 
 <script setup lang="ts">
-import { useUserStore } from '~/store/useUserStore';
+import { useUserStore } from '~/store/useUserStore'
 
-const userStore = useUserStore();
-const year = new Date().getFullYear();
+const userStore = useUserStore()
+const year = new Date().getFullYear()
 
 const logout = () => {
-  userStore.logout();
-  navigateTo('/');
-};
-</script>
-
-<style scoped>
-provet-layout {
-  margin: 0 auto;
+  userStore.logout()
+  navigateTo('/')
 }
-</style>
+</script>

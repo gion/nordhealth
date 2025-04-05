@@ -1,18 +1,16 @@
 <template>
   <div>
-    <h1 class="n-typescale-l">
-      Dashboard
-    </h1>
-    <p>
-      Welcome, {{ userName }} 👋, this is your dashboard page.
-    </p>
+    <h1 class="n-typescale-l">Dashboard</h1>
+    <p>Welcome, {{ displayName }} 👋, this is your dashboard page.</p>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useUserStore } from '@/store/useUserStore'
+
 definePageMeta({
-  middleware: 'auth'
+  middleware: 'auth',
 })
 
-const userName = "John Doe"
+const { displayName } = useUserStore()
 </script>
