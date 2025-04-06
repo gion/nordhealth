@@ -21,10 +21,12 @@
     <provet-icon
       :name="iconName"
       :style="iconStyle"
+      aria-describedby="password-visibility-tooltip"
       size="xl"
       class="icon"
       @click="togglePasswordVisibility"
     />
+    <provet-tooltip id="password-visibility-tooltip">{{ iconTooltip }}</provet-tooltip>
   </div>
 </template>
 
@@ -49,6 +51,10 @@ const inputType = computed(() => {
 
 const iconName = computed(() => {
   return isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on'
+})
+
+const iconTooltip = computed(() => {
+  return isPasswordVisible.value ? 'Hide password' : 'Show password'
 })
 
 const iconStyle = computed(() => {
@@ -77,7 +83,6 @@ watch(inputRef, () => {
 
 const togglePasswordVisibility = () => {
   isPasswordVisible.value = !isPasswordVisible.value
-  console.log('clicked')
 }
 </script>
 
