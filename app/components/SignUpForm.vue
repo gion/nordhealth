@@ -30,17 +30,16 @@
       </div>
 
       <div>
-        <provet-input
+        <PasswordInput
           v-model="form.password"
           :expand="true"
           :disabled="isSubmitting"
           label="Password"
-          type="Password"
         >
           <span v-if="errors.password" slot="error">
             {{ errors.password }}
           </span>
-        </provet-input>
+        </PasswordInput>
       </div>
 
       <div>
