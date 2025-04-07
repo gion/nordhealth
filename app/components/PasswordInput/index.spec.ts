@@ -7,7 +7,7 @@ import PasswordInput from './index.vue'
 describe('PasswordInput', () => {
   describe('render', () => {
     it(`doesn't explode`, () => {
-      const component = mount(PasswordInput)
+      mount(PasswordInput)
     })
 
     it('nothing unexpected has changed', () => {
