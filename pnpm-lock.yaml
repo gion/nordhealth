@@ -54,9 +54,6 @@ importers:
       happy-dom:
         specifier: ^17.4.4
         version: 17.4.4
-      playwright-core:
-        specifier: ^1.51.1
-        version: 1.51.1
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -7144,7 +7141,8 @@ snapshots:
       exsolve: 1.0.4
       pathe: 2.0.3
 
-  playwright-core@1.51.1: {}
+  playwright-core@1.51.1:
+    optional: true
 
   pluralize@8.0.0: {}
 
