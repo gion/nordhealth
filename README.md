@@ -20,3 +20,5 @@ The original task:
 Since this is a nuxt project, you have to first install the dependencies by running `npm install` (or using your preferred package manager... for example, this project is using [`pnpm`](https://pnpm.io/))
 
 Afterwards, running the `dev` task should spin up the local dev server.
+
+.
