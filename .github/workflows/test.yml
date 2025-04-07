@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   lint:
-    name: Linting code
+    name: Testing code
     runs-on: ubuntu-latest
 
     steps:
