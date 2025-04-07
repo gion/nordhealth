@@ -33,3 +33,6 @@ jobs:
 
       - name: Lint code
         run: pnpm lint
+
+      - name: Unit test
+        run: pnpm test
