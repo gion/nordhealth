@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
     '@nuxt/test-utils/module',
+    '@nuxtjs/robots',
   ],
   ssr: false,
   devtools: { enabled: true },
@@ -15,6 +16,7 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag.includes('-'),
     },
   },
+  site: { indexable: false },
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-11-01',
 })
