@@ -93,7 +93,7 @@ const validateForm = (): boolean => {
   const result = userSchema.safeParse(form)
 
   if (!result.success) {
-    result.error.errors.forEach((error) => {
+    result.error.errors.forEach((error: any) => {
       const field = error.path[0] as keyof User
       errors[field] = error.message
     })
